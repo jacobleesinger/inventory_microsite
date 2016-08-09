@@ -16,7 +16,7 @@ let productSchema = new  mongoose.Schema({
 productSchema.methods.getAll = function(cb) {
 };
 
-productSchema.methods.getById = function(cd, productId) {
+productSchema.methods.getById = function(cb, productId) {
     return Product.find({ productId: this._id })
 };
 
