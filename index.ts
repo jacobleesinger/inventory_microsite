@@ -1,6 +1,7 @@
 import * as express from 'express';
 import * as path from 'path';
 import './db';
+import './models';
 
 const app = express();
 
