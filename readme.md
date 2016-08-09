@@ -17,4 +17,4 @@ You'll probably have to install/set up mongodb and modify db.ts according to you
 - run `tsd install`
 - run `tsc` to compile typescript
 - run `node index.js` to run the server and database connection
-- only urls right now are `localhost:8080/` and `localhost:8080/search`
+- only routes routes right now are `localhost:8080/` and `localhost:8080/search`
