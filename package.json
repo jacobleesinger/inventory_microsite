@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express-handlebars": "^3.0.0",
     "mongodb": "^2.2.5",
+    "mongoose": "^4.5.8",
     "typescript": "^1.8.10"
   }
 }
