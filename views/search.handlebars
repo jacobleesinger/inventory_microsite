@@ -22,7 +22,12 @@
                 dataType: 'json',
                 data: data, 
                 success: function(response) { 
-                    $("#results").html("search results");
+                    console.log(response);
+                    var results = "";
+                    response.forEach(function(el) {
+                        results += el.name;
+                        });
+                    $("#results").html(results);
                 },
                 error: function(response) { console.log(response); }
                 });
