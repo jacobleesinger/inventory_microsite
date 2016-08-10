@@ -1,7 +1,25 @@
-<div>
+<div class="container">
     <h3>Search</h3>
-    <form>
-        <input type="text" placeholder="enter search term here">
-        <input type="submit" value="search">
+    <form id="search-form" method="post">
+        <input id="search-input" type="text" placeholder="enter a product name">
+        <input class="btn btn-primary" type="submit" value="search">
     </form>
 </div>
+<script type="text/javascript">
+
+    $('#search-form').on('submit', function(e) {
+            e.preventDefault();
+            var input = $('#search-input').val();
+            var data = {name: input};
+            console.log(JSON.stringify(data));
+            $.ajax({
+                url: 'http://localhost:8080/search',
+                method: 'POST',
+                type: 'application/json',
+                dataType: 'json',
+                data: data, 
+                success: function(response) { console.log(response); },
+                error: function(response) { console.log(response); }
+                });
+            });
+</script>

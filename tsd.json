@@ -37,6 +37,9 @@
     },
     "body-parser/body-parser.d.ts": {
       "commit": "5ff2770b384dcfef0c25b04472f59d3fc39e1919"
+    },
+    "multer/multer.d.ts": {
+      "commit": "a323a1f2d09c4c5af8b18908091bed7a502e3996"
     }
   }
 }

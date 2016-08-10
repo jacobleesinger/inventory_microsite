@@ -21,6 +21,10 @@ productSchema.methods.getById = function(productId, cb) {
     return Product.find({ productId: this._id }, cb);
 };
 
+productSchema.methods.getByName = function(name, cb) {
+    return Product.find({ name: this.name }, cb);
+};
+
 productSchema.methods.create = function(product: IProduct) {
     let newProduct = new Product(product);
     newProduct.save(function(err) {
