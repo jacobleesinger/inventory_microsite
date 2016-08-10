@@ -6,10 +6,14 @@ export const searchController = {
         app.post('/search', this.create);
     },
     show: function(req, res, next) {
-        res.render('search');
+        res.render('search', {results: "results"});
     },
     create: function(req, res, next) {
         console.log(req.body);
-        res.send('success');
+        Product.find({name: req.body.name}, function(err, products) {
+                    if(err) throw err;
+                    res.send({redirect: '/products'});
+            });
+
     }
 };

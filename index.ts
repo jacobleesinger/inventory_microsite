@@ -26,9 +26,5 @@ const handlebars = ExpressHandlebars.create({ defaultLayout: 'main' });
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
-app.get('/search', function(req: express.Request, res: express.Response) {
-    res.render('search');
-});
-
 const server = app.listen(8080);
 

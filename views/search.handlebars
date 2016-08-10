@@ -4,6 +4,9 @@
         <input id="search-input" type="text" placeholder="enter a product name">
         <input class="btn btn-primary" type="submit" value="search">
     </form>
+    <div id="results">
+        {{results}}
+    </div>
 </div>
 <script type="text/javascript">
 
@@ -18,7 +21,9 @@
                 type: 'application/json',
                 dataType: 'json',
                 data: data, 
-                success: function(response) { console.log(response); },
+                success: function(response) { 
+                    $("#results").html("search results");
+                },
                 error: function(response) { console.log(response); }
                 });
             });
